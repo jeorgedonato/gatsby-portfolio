@@ -1,7 +1,10 @@
 module.exports = {
 	siteMetadata: {
-		siteUrl: 'https://www.yourdomain.tld',
-		title: 'Jeorge Donato',
+		siteUrl: 'https://jergedonato.com',
+		siteTitle: 'Jeorge Donato | Full Stack Web Developer',
+		siteTitleAlt: 'Jeorge Donato | Full Stack Web Developer',
+		siteDescription: '',
+		author: '@jeorgedonato'
 	},
 	plugins: [
 		'gatsby-plugin-sass',
@@ -9,6 +12,7 @@ module.exports = {
 		'gatsby-plugin-react-helmet',
 		'gatsby-plugin-sharp',
 		'gatsby-transformer-sharp',
+		`gatsby-plugin-postcss`,
 		{
 			resolve: 'gatsby-source-filesystem',
 			options: {
