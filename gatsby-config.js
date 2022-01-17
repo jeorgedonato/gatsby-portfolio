@@ -21,5 +21,14 @@ module.exports = {
 			},
 			__key: 'images',
 		},
+		{
+			resolve: `gatsby-plugin-manifest`,
+			options: {
+				name: `Jeorge Donato`,
+				short_name: `JD`,
+				start_url: `/`,
+				icon: `src/images/webicon.png`
+			}
+		}
 	],
 };

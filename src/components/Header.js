@@ -7,6 +7,7 @@ const Header = () => {
         <>
             <Helmet>
                 <title>Jeorge Donato</title>
+                <meta name="icon" href="/images/webicon.png" />
             </Helmet>
             test
         </>
