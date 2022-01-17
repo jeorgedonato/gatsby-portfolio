@@ -1,33 +1,29 @@
 import * as React from "react"
-import '../styles/index.css'
+import '../styles/index.scss'
 import Layout from '../components/Layout'
-import { graphql } from "gatsby"
+import { Router } from '@reach/router'
+
+const About       = React.lazy(() => import("../components/About")) 
+const Portfolio   = React.lazy(() => import("../components/Portfolio")) 
+const Skills      = React.lazy(() => import("../components/Skills")) 
 
 // markup
-const IndexPage = ({ data }) => {
-  const pageData = data?.site?.siteMetaData ? data.site.siteMetaData : {}
+const IndexPage = () => {
   return (
     <>
-      <Layout>
-        <span className="font-bold text-2xl">Hello World!</span>
-      </Layout>
+        <Layout>
+          <React.Suspense>
+            <Router>
+              <About path="/about" />
+              <Portfolio path="/portfolio" />
+              <Skills path="/skills" />
+            </Router>
+          </React.Suspense>
+        </Layout>
     </>
   )
 }
 
 export default IndexPage
 
-export const PageQuery = graphql`query PageQuery {
-  site {
-    siteMetadata {
-      title
-      siteUrl
-      siteTitleAlt
-      siteDescription
-      siteTitle
-      description
-      author
-    }
-  }
-}
-`
+

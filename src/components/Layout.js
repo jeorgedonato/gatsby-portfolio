@@ -1,13 +1,17 @@
 import React from 'react'
 import Header from './Header'
+import Footer from './Footer'
 
 const Layout = ( { children } ) => {
 
     return (
         <>
-            <Header />
-            <div>
-                {children}
+            <div className='flex min-h-screen relative flex-col'>
+                <Header />
+                <div className='flex-grow'>
+                    {children}
+                </div>
+                <Footer />
             </div>
         </>
     )
