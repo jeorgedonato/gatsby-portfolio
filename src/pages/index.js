@@ -2,23 +2,30 @@ import * as React from "react"
 import '../styles/index.scss'
 import Layout from '../components/Layout'
 import { Router } from '@reach/router'
+import Home from '../components/Home'
 
-const About       = React.lazy(() => import("../components/About")) 
-const Portfolio   = React.lazy(() => import("../components/Portfolio")) 
-const Skills      = React.lazy(() => import("../components/Skills")) 
+
+const About = React.lazy(() => import('../components/About'));
+const Portfolio = React.lazy(() => import('../components/Portfolio'));
+const Skills = React.lazy(() => import('../components/Skills'));
+
+const LazyComponent = ({ Component, ...props }) => (
+  <React.Suspense fallback={'<p>Loading...</p>'}>
+    <Component {...props} />
+  </React.Suspense>
+);
 
 // markup
 const IndexPage = () => {
   return (
     <>
         <Layout>
-          <React.Suspense>
-            <Router>
-              <About path="/about" />
-              <Portfolio path="/portfolio" />
-              <Skills path="/skills" />
-            </Router>
-          </React.Suspense>
+          <Router>
+            <Home path="/" />
+            <LazyComponent Component={About} path="about" />
+            <LazyComponent Component={Portfolio} path="portfolio" />
+            <LazyComponent Component={Skills} path="skills" />
+          </Router>
         </Layout>
     </>
   )
