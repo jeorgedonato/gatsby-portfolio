@@ -23,75 +23,22 @@ module.exports = {
 				link: `/skills`
 			},
 		],
-		skills: [
-			{
-				name: "ReactJS",
-				percentage: 95
-			},
-			{
-				name: "MySQL",
-				percentage: 95
-			},
-			{
-				name: "TailwindCSS",
-				percentage: 95
-			},
-			{
-				name: "Wordpress",
-				percentage: 90
-			},
-			{
-				name: "HTML",
-				percentage: 100
-			},
-			{
-				name: "CSS/SCSS",
-				percentage: 100
-			},
-			{
-				name: "NextJS",
-				percentage: 85
-			},
-			{
-				name: "GatsbyJS",
-				percentage: 85
-			},
-			{
-				name: "PHP",
-				percentage: 95
-			},
-			{
-				name: "Javascript",
-				percentage: 100
-			},
-			{
-				name: "JQuery",
-				percentage: 95
-			},
-			{
-				name: "Jest Testing Library",
-				percentage: 80
-			},
-			{
-				name: "GraphQL",
-				percentage: 90
-			}
-		]
 	},
 	plugins: [
-		'gatsby-plugin-sass',
-		'gatsby-plugin-image',
-		'gatsby-plugin-react-helmet-async',
-		'gatsby-plugin-sharp',
-		'gatsby-transformer-sharp',
-		`gatsby-plugin-postcss`,
+		{
+			resolve: 'gatsby-source-filesystem',
+			options: {
+				name: 'data',
+				path: `${__dirname}/src/data/`,
+				ignore: [`**/\.*`]
+			}
+		},
 		{
 			resolve: 'gatsby-source-filesystem',
 			options: {
 				name: 'images',
-				path: './src/images/',
-			},
-			__key: 'images',
+				path: `${__dirname}/src/images`,
+			}
 		},
 		{
 			resolve: `gatsby-plugin-manifest`,
@@ -101,6 +48,31 @@ module.exports = {
 				start_url: `/`,
 				icon: `src/images/webicon.png`
 			}
-		}
+		},
+		{
+			resolve: `gatsby-plugin-sharp`,
+			options: {
+			  defaults: {
+				formats: [`auto`, `webp`],
+				placeholder: `dominantColor`,
+				quality: 90,
+				breakpoints: [750, 1080, 1366, 1920],
+				backgroundColor: `transparent`,
+				tracedSVGOptions: {},
+				blurredOptions: {},
+				jpgOptions: {},
+				pngOptions: {},
+				webpOptions: {},
+				avifOptions: {},
+			  },
+			},
+		},
+		'gatsby-transformer-json',
+		'gatsby-plugin-sharp',
+		'gatsby-transformer-sharp',
+		'gatsby-plugin-sass',
+		'gatsby-plugin-image',
+		'gatsby-plugin-react-helmet-async',
+		`gatsby-plugin-postcss`,
 	],
 };

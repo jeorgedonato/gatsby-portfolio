@@ -6,7 +6,7 @@ import Home from '../components/Home'
 
 
 const About = React.lazy(() => import('../components/About'));
-const Portfolio = React.lazy(() => import('../components/Portfolio'));
+const Portfolio = React.lazy(() => import('../components/Projects'));
 const Skills = React.lazy(() => import('../components/Skills'));
 
 const LazyComponent = ({ Component, ...props }) => (

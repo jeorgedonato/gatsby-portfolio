@@ -1,0 +1,33 @@
+[
+    {
+        "name": "Spent Smart",
+        "githubUrl": "https://github.com/jeorgedonato/spent-smart",
+        "description": "Spent Smart allows users to input their monthly income and expense breakdown (along with their associated category options, such as paycheck, food, transportation, etc.)."
+    },
+    {
+        "name": "BootStocks",
+        "githubUrl": "https://github.com/jeorgedonato/BootStocks",
+        "image": "images/bootstocks.png",
+        "description": "A Fullstack Web Application that allowing users to create their mock stock portfolio."
+    },
+    {
+        "name": "To Make or To Go",
+        "githubUrl": "https://github.com/jeorgedonato/to-make-or-to-go",
+        "description": "A Web Application that utilizes Yelp Api and Google Maps Api that allowing users to search for recipes or a restaurant."
+    },
+    {
+        "name": "PWA Budget Tracker",
+        "githubUrl": "https://github.com/jeorgedonato/pwa-budget-tracker",
+        "description": "A Full Stack Web Application that can be use either online or offline backed up with indexed DB so the users won't worry about their internet connections."
+    },
+    {
+        "name": "Google Books Search",
+        "githubUrl": "https://github.com/jeorgedonato/google-books-search",
+        "description": "A Web Application that allows users to search for their books and save it in a Database including a live notifications for saved books."
+    },
+    {
+        "name": "Note Taker",
+        "githubUrl": "https://github.com/jeorgedonato/note-taker",
+        "description": "A Web App that can retrieve, add, update, delete user's notes."
+    }
+]

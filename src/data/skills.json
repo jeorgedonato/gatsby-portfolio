@@ -1,0 +1,62 @@
+[
+    {
+        "title": "ReactJS",
+        "percentage": 95,
+        "image": "../images/react.png"
+    },
+    {
+        "title": "MySQL",
+        "percentage": 95,
+        "image": "../images/mysql.png"
+    },
+    {
+        "title": "TailwindCSS",
+        "percentage": 95,
+        "image": "../images/tailwindcss.png"
+    },
+    {
+        "title": "Wordpress",
+        "percentage": 90,
+        "image": "../images/wordpress.png"
+    },
+    {
+        "title": "HTML",
+        "percentage": 100,
+        "image": "../images/html.png"
+    },
+    {
+        "title": "CSS/SCSS",
+        "percentage": 100,
+        "image": "../images/sass.png"
+    },
+    {
+        "title": "NextJS",
+        "percentage": 85,
+        "image": "../images/nextjs.png"
+    },
+    {
+        "title": "PHP",
+        "percentage": 95,
+        "image": "../images/php.png"
+    },
+    {
+        "title": "Javascript",
+        "percentage": 100,
+        "image": "../images/javascript.png"
+    },
+    {
+        "title": "JQuery",
+        "percentage": 95,
+        "image": "../images/jquery.png"
+    },
+    {
+        "title": "Jest Testing Library",
+        "percentage": 80,
+        "image": "../images/jest.png"
+    },
+    {
+        "title": "GraphQL",
+        "percentage": 90,
+        "image": "../images/graphql.png"
+    }
+]

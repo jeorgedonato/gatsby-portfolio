@@ -18,6 +18,10 @@ module.exports = {
         darkOrange: '#FB8500'
       }
     },
+    container: {
+      center: true,
+      padding: '2rem'
+    }
   },
   variants: {},
   plugins: [],
