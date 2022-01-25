@@ -16,7 +16,7 @@ const Skills = () => {
                       width: 200
                       height: 200
                       quality: 100
-                      placeholder: DOMINANT_COLOR
+                      placeholder: BLURRED
                     )
                   }
                 }
