@@ -25,12 +25,6 @@ const Skills = () => {
               }
             }
           }
-          file(relativePath: {eq: "technologies.jpg"}) {
-            id
-            childImageSharp {
-              gatsbyImageData(quality: 50, placeholder: BLURRED)
-            }
-          }
         }                             
         `
     )

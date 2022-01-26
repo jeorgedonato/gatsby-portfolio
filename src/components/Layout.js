@@ -2,17 +2,21 @@ import React from 'react'
 import Header from './Header'
 import Footer from './Footer'
 
+import { AppProvider } from '../context/siteContext'
+
 const Layout = ( { children } ) => {
 
     return (
         <>
-            <div className='flex min-h-screen relative flex-col font-sans overflow-hidden'>
-                <Header />
-                <div className='flex-grow'>
-                    {children}
+            <AppProvider>
+                <div className='flex min-h-screen relative flex-col font-sans overflow-hidden'>
+                    <Header />
+                    <div className='flex-grow'>
+                        {children}
+                    </div>
+                    <Footer />
                 </div>
-                <Footer />
-            </div>
+            </AppProvider>
         </>
     )
 }
