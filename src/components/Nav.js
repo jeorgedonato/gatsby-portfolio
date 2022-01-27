@@ -1,15 +1,23 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect, useContext } from 'react'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { IoMdClose } from 'react-icons/io'
 import { Link } from '@reach/router'
+import { AppContext } from '../context/siteContext'
 
 const Nav = () => {
 
+    const [ navHeight, setNavHeight ] = useContext(AppContext)
+
     const [isActive, setActive] = useState(false)
+    const navRef = useRef(null)
+
+    useEffect(() => {
+        setNavHeight(navRef.current?.clientHeight)
+    }, []);
 
     return (
         <>
-            <nav className='flex flex-row py-6 px-10 md:px-24 gap-x-16 bg-darkBlue text-white items-center justify-between md:justify-start'>
+            <nav ref={navRef} className='flex flex-row py-6 px-10 md:px-24 gap-x-16 bg-darkBlue text-white items-center justify-between md:justify-start'>
                 <div>
                     <span className='font-bold text-xl md:text-2xl'><Link to="/">Jeorge Donato</Link></span>
                 </div>

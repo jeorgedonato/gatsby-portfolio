@@ -1,0 +1,53 @@
+@keyframes text-2nd {
+    0%, 50%, 100% {
+      width: 0;
+    }
+    
+    60%, 90% {
+      width: 11em;
+    }
+  }
+  @keyframes text-1st {
+    0%, 50%, 100% {
+      width: 0;
+    }
+    10%, 40% {
+      width: 14.5em;
+    }
+  }
+  
+  .text-1st {
+    animation: text-1st;
+  }
+  .text-2nd {
+    animation: text-2nd;
+  }
+  
+  @keyframes caret {
+    0%, 100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  
+  .text-1st, .text-2nd {
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    position: relative;
+    animation-duration: 15s;
+    animation-timing-function: steps(25, end);
+    animation-iteration-count: infinite;
+  }
+  
+  .text-1st::after, .text-2nd::after{
+    @apply text-cyan-700;
+    content: "|";
+    position: absolute;
+    right: 0;
+    animation: caret infinite;
+    animation-duration: 1s;
+    animation-timing-function: steps(1, end);
+  }
