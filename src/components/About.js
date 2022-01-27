@@ -8,7 +8,7 @@ const About = () => {
                 <div className="py-10 text-center font-bold text-4xl mb-4">About Me</div>
                 <div className="py-4 flex flex-col relative items-center gap-y-4">
                     <div className='w-1/2 relative flex items-center w-full'>
-                        <p className="p-6 container text-center text-lg leading-relaxed w-full">
+                        <p className="p-6 container text-center text-lg leading-relaxed w-full font-poppins">
                         An experienced full-stack web developer who is passionate about writing clean and concise codes throughout the development lifecycle. Recognized by peers as a strong and collaborative team player. Excited to be a part of a quality-driven, collaborative work environment where I can leverage my background and skill set.<br /><br />
                         I am currently working as a Web Developer at Premier Print Source Inc.<br /><br />
 
