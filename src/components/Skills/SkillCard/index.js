@@ -22,7 +22,7 @@ const SkillCard = ({props}) => {
     return (
         <>
             <div className="text-center flex flex-col relative ">
-                <div className="relative drop-shadow-lg bg-white py-6 relative rounded-md">
+                <div className="relative drop-shadow-lg shadow-lg bg-white py-6 relative rounded-md">
                     <GatsbyImage image={imageData} alt={title} />
                     <VisibilitySensor onChange={onChange} partialVisibility delayedCall>
                         <div 

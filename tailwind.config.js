@@ -8,6 +8,10 @@ module.exports = {
         sans: [
           'Outfit',
           ...fontFamily.sans
+        ],
+        poppins: [
+          'Poppins',
+          ...fontFamily.sans
         ]
       },
       colors: {

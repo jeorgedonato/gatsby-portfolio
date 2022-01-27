@@ -30,7 +30,7 @@ const Footer = () => {
 						<FaGithubSquare className='text-2xl' />
 					</a>
 				</p>
-				<span className='font-bold text-lg'>© by Jeorge Janil Donato {year}</span>
+				<span className='font-bold text-lg text-center'>© by Jeorge Janil Donato {year}</span>
 			</footer>
         </>
     )
