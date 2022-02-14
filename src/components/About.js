@@ -2,6 +2,11 @@ import React from "react";
 import { StaticImage } from "gatsby-plugin-image"
 
 const About = () => {
+
+    // const word = 'wording'
+
+    // console.log([...word])
+
     return (
         <>
             <article className='py-6'>
