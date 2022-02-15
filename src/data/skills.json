@@ -58,5 +58,10 @@
         "title": "GraphQL",
         "percentage": 90,
         "image": "../images/graphql.png"
+    },
+    {
+        "title": "MongoDB",
+        "percentage": 90,
+        "image": "../images/mongodb.png"
     }
 ]

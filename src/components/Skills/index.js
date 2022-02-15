@@ -31,6 +31,9 @@ const Skills = () => {
 
     const skills = allSkillsJson?.edges
 
+    const colorArr = ['bg-darkerBlue', 'bg-darkerGreen', 'bg-darkerOrange', 'bg-darkerRed']
+    let currentColor = 0;
+
     return (
         <>
             <article className="bg-white py-6">
@@ -38,7 +41,10 @@ const Skills = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-x-4 container items-center justify-center">
                     {skills.sort((a,b) => { if(a.node.percentage > b.node.percentage) return -1 }).map( (skill, idx) =>
                     {
-                      return ( <SkillCard props={skill} key={idx} />)
+                      currentColor = currentColor === colorArr.length ? 0 : currentColor
+                      const skillCard = <SkillCard skill={skill} bg={colorArr[currentColor]}  key={idx} />
+                      currentColor++
+                      return (skillCard)
                     }  )}
                 </div>
                 

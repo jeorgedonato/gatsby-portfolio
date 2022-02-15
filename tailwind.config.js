@@ -19,7 +19,11 @@ module.exports = {
         lightBlue: '#219EBC',
         darkBlue: '#023047',
         lightOrange: '#FFB703',
-        darkOrange: '#FB8500'
+        darkOrange: '#FB8500',
+        darkerBlue: '#023047',
+        darkerGreen: '#005f73',
+        darkerOrange: '#ca6702',
+        darkerRed: '#bb3e03',
       }
     },
     container: {
